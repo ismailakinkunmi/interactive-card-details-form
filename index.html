@@ -15,7 +15,8 @@
 <body>
 
   <section class="card-setion">
-    <div class="card-front">
+
+    <div class="front-card">
       <cdiv class="dots">
         <div class="bg-dot"></div>
         <div class="sm-dot"></div>
@@ -27,10 +28,11 @@
       </div>
     </div>
 
-    <div class="card-back">
+    <div class="back-card">
       <div class="black-box"></div>
       <div class="gray-box">000</div>
     </div>
+  
 </section>
 
 <form class="form-section">
@@ -43,11 +45,19 @@
     <input type="number" name="" id="" placeholder=" e.g. 1234 5678 9123 0000">
   </div>
  
-  <div class="form-control date">
-    <div><span> Exp.Date</span><span>(MM/YY)</span> <span>CVC</span></div>
-    <input type="number" placeholder="MM" class="month">
+  <div class="form-control debit-card">
+    <div class="">
+      <label for="">Exp.Date</label>
+      <input type="number" placeholder="MM" class="month">    
+    </div>
+   <div class="">
+    <label for="">(MM/YY)</label>
     <input type="number" placeholder="YY" class="year">
+   </div>
+   <div class="">
+    <label for="">CVC</label>
     <input type="number" placeholder="e.g. 123" class="cvc">   
+   </div>
   </div>
 
   <button type="submit" class="submit">confirm</button>
@@ -63,14 +73,6 @@
 
 
   <!-- Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
 
   Confirm -->
 
@@ -80,9 +82,9 @@
   We've added your card details
   Continue -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

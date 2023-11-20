@@ -20,32 +20,30 @@ body {
 }
 
 .card-setion {
-    position: relative;
-    background: var(--Very-dark-violet);
-    padding: 18px 12px;
-    color: #fff;
-    padding: 50px 0;
+    background-color: var(--Very-dark-violet);
+    padding: 20px 12px 40px;
     display: flex;
-    align-items: center;
+    align-items: end;
+    flex-direction: column;
 }
 
-.card-front,
-.card-back {
-    height: 150px;
-    /* width: 280px; */
-    width: 90%;
+.front-card,
+.back-card {
+    color: #fff;
+    height: 180px;
+    min-width: 270px;
+    width: 80%;
     border-radius: 6px;
-    padding-top: 12px;
 }
 
-.card-front {
+
+/* card front */
+.front-card {
     background: linear-gradient(to right, hsl(249, 99%, 64%) 20%, hsl(278, 94%, 30%));
     padding: 12px 20px;
-    position: absolute;
-    bottom: -45px;
 }
 
-.card-front .dots {
+.front-card .dots {
     display: flex;
     gap: 8px;
     justify-content: start;
@@ -53,24 +51,24 @@ body {
 }
 
 .dots .bg-dot {
-    padding: 12px;
+    padding: 16px;
     border-radius: 50%;
     background-color: var(--White);
 }
 
 .dots .sm-dot {
-    padding: 5px;
+    padding: 6px;
     height: 6px;
     border-radius: 50%;
     border: 1px solid #fff;
 }
 
-.card-front .card-number {
+.front-card .card-number {
     letter-spacing: 2px;
-    margin: 30px 0 15px 0;
+    margin: 40px 0;
 }
 
-.card-front .owner-info {
+.front-card .owner-info {
     display: flex;
     justify-content: space-between;
 }
@@ -81,24 +79,24 @@ body {
 
 .owner-info .date,
 .owner-info .name {
-    font-size: 10px;
+    font-size: 12px;
 }
 
+/*_____________________________________ card back ________________________________________________*/
 
-
-
-.card-back {
+.back-card {
     background-color: var(--White);
+    padding-top: 20px;
 }
 
-.card-back .black-box {
+.back-card .black-box {
     width: 100%;
     height: 40px;
     background-color: #000;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
-.card-back .gray-box {
+.back-card .gray-box {
     margin: auto;
     background-color: var(--Light-grayish-violet);
     width: 80%;
@@ -108,10 +106,12 @@ body {
     padding: 6px 10px;
 }
 
+/* ____________________________________card section end____________________________________________ */
+
 .form-section {
     width: 100%;
-    margin-top: 100px;
     background-color: var(--White);
+    padding: 80px 12px 50px;
 
 }
 
@@ -130,32 +130,14 @@ body {
     padding: 12px;
     border-radius: 4px;
     width: 100%;
-    /* max-width: 350px; */
     margin-bottom: 18px;
 }
 
-.date div span {
-    font-size: 16px;
-    margin-right: 10px;
+.debit-card {
+    display: flex;
+    gap: 6px;
 }
 
-/* .date input {
-    margin-right: 15px;
-} */
-
-.date .month,
-.date .year {
-    /* width: 69px; */
-    width: calc(25% - 5px);
-
-    padding: 12px 8px;
-    margin-right: 5px;
-}
-
-.date .cvc {
-    width: calc(50% - 10px);
-    /* max-width: 140px; */
-}
 
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button,
@@ -180,5 +162,40 @@ input[type=number] {
     border: none;
     font-size: inherit;
     font-family: inherit;
+    margin-top: 20px;
 
+}
+
+
+@media screen and (max-width: 375px) {
+    .front-card {
+        position: absolute;
+        top: 130px;
+        left: 12px;
+    }
+
+    .debit-card {
+        width: 100%;
+    }
+
+    .debit-card div {
+        width: calc(25% - 6px);
+    }
+
+    .debit-card div:last-child {
+        width: calc(50% - 6px);
+    }
+
+    .debit-card .month {
+        width: 95%;
+    }
+
+    .debit-card .year {
+        width: 100%;
+        padding: 12px 8px;
+    }
+
+    .debit-card .cvc {
+        width: 100%;
+    }
 }
