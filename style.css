@@ -1,0 +1,184 @@
+:root {
+    --Red-input-errors: hsl(0, 100%, 66%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.card-setion {
+    position: relative;
+    background: var(--Very-dark-violet);
+    padding: 18px 12px;
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-front,
+.card-back {
+    height: 150px;
+    /* width: 280px; */
+    width: 90%;
+    border-radius: 6px;
+    padding-top: 12px;
+}
+
+.card-front {
+    background: linear-gradient(to right, hsl(249, 99%, 64%) 20%, hsl(278, 94%, 30%));
+    padding: 12px 20px;
+    position: absolute;
+    bottom: -45px;
+}
+
+.card-front .dots {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+}
+
+.dots .bg-dot {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.dots .sm-dot {
+    padding: 5px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.card-front .card-number {
+    letter-spacing: 2px;
+    margin: 30px 0 15px 0;
+}
+
+.card-front .owner-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.owner-info .name {
+    text-transform: uppercase;
+}
+
+.owner-info .date,
+.owner-info .name {
+    font-size: 10px;
+}
+
+
+
+
+.card-back {
+    background-color: var(--White);
+}
+
+.card-back .black-box {
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    margin-bottom: 12px;
+}
+
+.card-back .gray-box {
+    margin: auto;
+    background-color: var(--Light-grayish-violet);
+    width: 80%;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: right;
+    padding: 6px 10px;
+}
+
+.form-section {
+    width: 100%;
+    margin-top: 100px;
+    background-color: var(--White);
+
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control label {
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.form-control input {
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    /* max-width: 350px; */
+    margin-bottom: 18px;
+}
+
+.date div span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* .date input {
+    margin-right: 15px;
+} */
+
+.date .month,
+.date .year {
+    /* width: 69px; */
+    width: calc(25% - 5px);
+
+    padding: 12px 8px;
+    margin-right: 5px;
+}
+
+.date .cvc {
+    width: calc(50% - 10px);
+    /* max-width: 140px; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.submit {
+    width: 100%;
+    background-color: var(--Very-dark-violet);
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+
+}
