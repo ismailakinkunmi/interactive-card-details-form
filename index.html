@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+<body>
+
+  <section class="card-setion">
+    <div class="card-front">
+      <cdiv class="dots">
+        <div class="bg-dot"></div>
+        <div class="sm-dot"></div>
+      </cdiv>
+      <p class="card-number">0000 0000 0000 0000</p>
+      <div class="owner-info">
+        <p class="name">Jane Appleseed</p>
+        <p class="date"> 00/00</p>
+      </div>
+    </div>
+
+    <div class="card-back">
+      <div class="black-box"></div>
+      <div class="gray-box">000</div>
+    </div>
+</section>
+
+<form class="form-section">
+  <div class="form-control">
+    <label for="">Cardholder Name</label>
+    <input type="text" name="" id="" placeholder="e.g. Jane Appleseed">
+  </div>
+  <div class="form-control">
+    <label for="">Card Number</label>
+    <input type="number" name="" id="" placeholder=" e.g. 1234 5678 9123 0000">
+  </div>
+ 
+  <div class="form-control date">
+    <div><span> Exp.Date</span><span>(MM/YY)</span> <span>CVC</span></div>
+    <input type="number" placeholder="MM" class="month">
+    <input type="number" placeholder="YY" class="year">
+    <input type="number" placeholder="e.g. 123" class="cvc">   
+  </div>
+
+  <button type="submit" class="submit">confirm</button>
+
+</form>
+  
+  
+ 
+
+  
+
+  
+
+
+  <!-- Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm -->
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
