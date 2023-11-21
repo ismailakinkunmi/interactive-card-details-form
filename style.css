@@ -1,0 +1,284 @@
+:root {
+    --Red-input-errors: hsl(0, 100%, 66%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.card-setion {
+    background-color: var(--Very-dark-violet);
+    padding: 20px 12px 40px;
+    display: flex;
+    align-items: end;
+    min-width: 280px;
+    flex-direction: column;
+}
+
+.front-card,
+.back-card {
+    color: #fff;
+    height: 180px;
+    min-width: 270px;
+    width: 80%;
+    border-radius: 6px;
+}
+
+
+/* card front */
+.front-card {
+    background: linear-gradient(to right, hsl(249, 99%, 64%) 20%, hsl(278, 94%, 30%));
+    padding: 12px;
+}
+
+.front-card .dots {
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+}
+
+.dots .bg-dot {
+    padding: 16px;
+    border-radius: 50%;
+    background-color: var(--White);
+}
+
+.dots .sm-dot {
+    padding: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.front-card .card-number {
+    letter-spacing: 2px;
+    margin: 40px 0;
+}
+
+.front-card .owner-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.owner-info .name {
+    text-transform: uppercase;
+}
+
+.owner-info .date,
+.owner-info .name {
+    font-size: 12px;
+}
+
+/*_____________________________________ back card ________________________________________________*/
+
+.back-card {
+    background-color: var(--Light-grayish-violet);
+    display: flex;
+    flex-flow: wrap column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.back-card .black-box {
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+}
+
+.back-card .gray-box {
+    background-color: var(--Dark-grayish-violet);
+    width: 80%;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: right;
+    padding: 6px 10px;
+}
+
+.back-card .lines-wrapper {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 4px;
+}
+
+.lines-wrapper .lines {
+    display: flex;
+    gap: 3px;
+}
+
+.lines:nth-child(2) {
+    margin-left: 8px;
+}
+
+.line {
+    padding: 1.5px 0;
+    background-color: var(--Dark-grayish-violet);
+}
+
+.line-4 {
+    width: 70px;
+}
+
+.line-3 {
+    width: 30px;
+}
+
+.line-2 {
+    width: 10px;
+}
+
+.line-1 {
+    width: 5px;
+}
+
+/* ____________________________________card section end____________________________________________ */
+
+.form-section {
+    width: 100%;
+    min-width: 280px;
+    background-color: var(--White);
+    padding: 80px 12px 50px;
+
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control label {
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.form-control input {
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.debit-card {
+    display: flex;
+    gap: 6px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.submit {
+    width: 100%;
+    background-color: var(--Very-dark-violet);
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 20px;
+
+}
+
+
+@media screen and (min-width: 375px) {
+    .front-card {
+        position: absolute;
+        top: 130px;
+        left: 12px;
+    }
+
+    .debit-card {
+        width: 100%;
+    }
+
+    .debit-card div {
+        width: calc(25% - 6px);
+    }
+
+    .debit-card div:last-child {
+        width: calc(50% - 6px);
+    }
+
+    .debit-card .month {
+        width: 95%;
+    }
+
+
+    .debit-card .year {
+        width: 100%;
+        padding: 12px 8px;
+    }
+
+    .debit-card .cvc {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+
+
+    body {
+        display: flex;
+        flex-flow: wrap row;
+        gap: calc((100vw - 800px)/ 2);
+        align-items: center;
+
+    }
+
+    .card-setion {
+        min-height: 100vh;
+        width: 200px;
+    }
+
+    .front-card,
+    .back-card {
+        max-width: 280px;
+    }
+
+    .front-card {
+        position: absolute;
+        left: 80px;
+        top: 20vh;
+    }
+
+    .back-card {
+        position: absolute;
+        top: 53vh;
+        left: 150px;
+    }
+
+    .form-section {
+        max-width: 400px;
+    }
+
+    .debit-card .month {
+        width: 80px;
+    }
+
+}
