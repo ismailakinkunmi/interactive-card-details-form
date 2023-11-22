@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Interactive card details form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   
 </head>
 <body>
@@ -57,32 +59,47 @@
 
 <form class="form-section">
   <div class="form-control">
-    <label for="">Cardholder Name</label>
-    <input type="text" name="" id="" placeholder="e.g. Jane Appleseed">
+    <label for="card-name">Cardholder Name</label>
+    <input type="text" name="name" id="card-name" placeholder="e.g. Jane Appleseed" autocomplete="on">
+    <small class="input-error"></small>
   </div>
   <div class="form-control">
-    <label for="">Card Number</label>
-    <input type="number" name="" id="" placeholder=" e.g. 1234 5678 9123 0000">
+    <label for="card-number">Card Number</label>
+    <input type="text" name="number" id="card-number" placeholder=" e.g. 1234 5678 9123 0000" autocomplete="name">
+    <small class="input-error"></small>
   </div>
  
   <div class="form-control debit-card">
     <div class="">
-      <label for="">Exp.Date</label>
-      <input type="number" placeholder="MM" class="month">    
+      <label for="date">Exp.Date</label>
+      <input type="number" placeholder="MM" id="date" class="month" autocomplete="off">  
+      <small class="input-error"></small>  
     </div>
    <div class="">
-    <label for="">(MM/YY)</label>
-    <input type="number" placeholder="YY" class="year">
+    <label for="year">(MM/YY)</label>
+    <input type="number" id="year" placeholder="YY" class="year" autocomplete="off">
+    <small class="input-error"></small>
    </div>
    <div class="">
-    <label for="">CVC</label>
-    <input type="number" placeholder="e.g. 123" class="cvc">   
+    <label for="cvc">CVC</label>
+    <input type="number" id="cvc" placeholder="e.g. 123" class="cvc" autocomplete="off">    
+    <small class="input-error"></small>
    </div>
   </div>
 
   <button type="submit" class="submit">confirm</button>
 
 </form>
+
+<div class="complete-state">
+  <div class="purpple">
+    <i class="fa-sharp fa-solid fa-check mark"></i>  
+  </div>
+  <h4 class="Thank-you">Thank you!</h4>
+  <p class="added">We've added your card details</p>  
+
+  <button type="reset" class="continue">continue</button>
+</div>
   
   
  

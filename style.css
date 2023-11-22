@@ -147,7 +147,8 @@ body {
 
 /* ____________________________________card section end____________________________________________ */
 
-.form-section {
+.form-section,
+.complete-state {
     width: 100%;
     min-width: 280px;
     background-color: var(--White);
@@ -157,11 +158,13 @@ body {
 
 .form-control {
     width: 100%;
+    margin-bottom: 18px;
 }
 
 .form-control label {
     font-size: 16px;
     display: block;
+
     text-transform: uppercase;
     margin-bottom: 6px;
 }
@@ -170,7 +173,16 @@ body {
     padding: 12px;
     border-radius: 4px;
     width: 100%;
-    margin-bottom: 18px;
+}
+
+.input-errorMessage {
+    border-color: var(--Red-input-errors);
+}
+
+.form-control .input-error {
+    font-size: 10px;
+    color: var(--Red-input-errors);
+    display: none;
 }
 
 .debit-card {
@@ -190,7 +202,42 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.submit {
+.complete-state {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    display: none;
+}
+
+.purpple {
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+    background-color: hsl(249, 99%, 64%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purpple .mark {
+    color: #fff;
+}
+
+.complete-state .Thank-you {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.complete-state .added {
+    color: var(--Dark-grayish-violet);
+
+}
+
+.submit,
+.continue {
     width: 100%;
     background-color: var(--Very-dark-violet);
     color: #fff;
@@ -273,8 +320,10 @@ input[type=number] {
         left: 150px;
     }
 
-    .form-section {
+    .form-section,
+    .complete-state {
         max-width: 400px;
+        background-color: var(--White);
     }
 
     .debit-card .month {
