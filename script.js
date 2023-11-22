@@ -9,7 +9,10 @@ const submitBotton = document.querySelector(".submit");
 const cardName = document.getElementById("card-name");
 const cardNumber = document.getElementById("card-number");
 
-const regex = /^\d*$/;
+const regex = /^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d+)?\s*$/;
+
+const tester = "e";
+console.log(regex.test(tester));
 
 submitBotton.addEventListener("click", (e) => {
   e.preventDefault();
